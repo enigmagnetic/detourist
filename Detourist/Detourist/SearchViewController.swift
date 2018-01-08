@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import CoreLocation
 import GoogleMaps
 import GooglePlaces
 
-class SearchViewController: UIViewController, GMSMapViewDelegate {
-    @IBOutlet fileprivate weak var mapView: GMSMapView!
+class SearchViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var mapView: GMSMapView!
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 6.0)
-        mapView.camera = camera
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        let latitude = locationManager.location?.coordinate.latitude ?? 23.1136
+        let longitude = locationManager.location?.coordinate.longitude ?? 82.3666
+        
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 10.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        self.view = mapView
+        self.mapView?.isMyLocationEnabled = true
+        
+       
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+         // locationManager.stopUpdatingLocation()
     }
 }

@@ -59,20 +59,7 @@
         <!--Search View Controller-->
         <scene sceneID="kpP-jz-7iG">
             <objects>
-                <viewController id="Zie-h9-NKz" userLabel="Search View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iKc-vg-oW0" customClass="GMSMapView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2t4-HN-16x">
-                                <rect key="frame" x="0.0" y="50" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ffa-WE-G6f"/>
-                    </view>
+                <viewController id="Zie-h9-NKz" userLabel="Search View Controller" customClass="SearchViewController" customModule="Detourist" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <outlet property="searchDisplayController" destination="6nI-PW-MpM" id="g3y-mf-Z1e"/>
                     </connections>
