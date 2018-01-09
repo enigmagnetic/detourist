@@ -16,6 +16,7 @@
 		5D19B1321FFD953600CF248F /* DetouristTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D19B1311FFD953600CF248F /* DetouristTests.swift */; };
 		5D19B13D1FFD953700CF248F /* DetouristUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D19B13C1FFD953700CF248F /* DetouristUITests.swift */; };
 		5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */; };
+		5DEE6D812004496200E6FAC7 /* SearchPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE6D802004496200E6FAC7 /* SearchPlacesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5D19B13C1FFD953700CF248F /* DetouristUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetouristUITests.swift; sourceTree = "<group>"; };
 		5D19B13E1FFD953700CF248F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5DEE6D802004496200E6FAC7 /* SearchPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlacesViewController.swift; sourceTree = "<group>"; };
 		6BE1E79874B2E9E348221142 /* libPods-Detourist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Detourist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87A1C347E077F7359EE875F /* Pods-Detourist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detourist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Detourist/Pods-Detourist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				5D19B11C1FFD953600CF248F /* AppDelegate.swift */,
 				5D19B11E1FFD953600CF248F /* ViewController.swift */,
 				5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */,
+				5DEE6D802004496200E6FAC7 /* SearchPlacesViewController.swift */,
 				5D19B1201FFD953600CF248F /* Main.storyboard */,
 				5D19B1231FFD953600CF248F /* Assets.xcassets */,
 				5D19B1251FFD953600CF248F /* LaunchScreen.storyboard */,
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DEE6D812004496200E6FAC7 /* SearchPlacesViewController.swift in Sources */,
 				5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */,
 				5D19B11F1FFD953600CF248F /* ViewController.swift in Sources */,
 				5D19B11D1FFD953600CF248F /* AppDelegate.swift in Sources */,

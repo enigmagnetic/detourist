@@ -11,15 +11,35 @@ import CoreLocation
 import GoogleMaps
 import GooglePlaces
 
-class SearchViewController: UIViewController, CLLocationManagerDelegate {
+class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteResultsViewControllerDelegate {
+    
     @IBOutlet weak var mapView: GMSMapView!
     let locationManager = CLLocationManager()
+    var resultsViewController: GMSAutocompleteResultsViewController?
+    var searchController: UISearchController?
+    var resultView: UITextView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
+        resultsViewController = GMSAutocompleteResultsViewController()
+        resultsViewController?.delegate = self
+        
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        
+        searchController = UISearchController(searchResultsController: resultsViewController)
+        searchController?.searchResultsUpdater = resultsViewController
+        
+        // Put the search bar in the navigation bar
+        searchController?.searchBar.sizeToFit()
+        navigationItem.titleView = searchController?.searchBar
+        
+        // When UISearchController presents the results view, present it in this view controller, not the one further up the chain
+        definesPresentationContext = true
+        
+        // Prevent the navigation bar from being hidden when searching.
+        searchController?.hidesNavigationBarDuringPresentation = false
         
         let latitude = locationManager.location?.coordinate.latitude ?? 23.1136
         let longitude = locationManager.location?.coordinate.longitude ?? 82.3666
@@ -34,5 +54,25 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
          // locationManager.stopUpdatingLocation()
+    }
+    
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {
+        searchController?.isActive = false
+        // Do something with the selected place.
+        print("Place name: \(place.name)")
+        print("Place address: \(String(describing: place.formattedAddress))")
+    }
+    
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    func didRequestAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
