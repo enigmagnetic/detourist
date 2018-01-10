@@ -2,7 +2,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Detourist' do
   pod 'GooglePlaces'
   pod 'GoogleMaps'
-  pod 'Firebae/Core'
+  pod 'Firebase/Core'
   pod 'Firebase/Database'
-  pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
+  
+  pod 'FirebaseUI/Google'
 end
