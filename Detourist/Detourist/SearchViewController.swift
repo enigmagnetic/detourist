@@ -48,8 +48,6 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.view = mapView
         self.mapView?.isMyLocationEnabled = true
-        
-       
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
