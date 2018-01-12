@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		057E83D7C0EB554927A302BD /* libPods-Detourist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0366398D7EF31BB4ABDE9B2F /* libPods-Detourist.a */; };
+		385F625A1CE929CC96F135E2 /* Pods_Detourist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A43B27620091D375F1D8D95 /* Pods_Detourist.framework */; };
 		5D19B11D1FFD953600CF248F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D19B11C1FFD953600CF248F /* AppDelegate.swift */; };
 		5D19B11F1FFD953600CF248F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D19B11E1FFD953600CF248F /* ViewController.swift */; };
 		5D19B1221FFD953600CF248F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D19B1201FFD953600CF248F /* Main.storyboard */; };
@@ -19,7 +19,6 @@
 		5DAAD1E72004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */; };
 		5DAAD1E82004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */; };
 		5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */; };
-		5DEE6D812004496200E6FAC7 /* SearchPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE6D802004496200E6FAC7 /* SearchPlacesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		02C9997723DD88596705BADC /* Pods-Detourist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detourist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Detourist/Pods-Detourist.release.xcconfig"; sourceTree = "<group>"; };
-		0366398D7EF31BB4ABDE9B2F /* libPods-Detourist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Detourist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D19B1191FFD953600CF248F /* Detourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Detourist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D19B11C1FFD953600CF248F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D19B11E1FFD953600CF248F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +55,7 @@
 		5D19B13E1FFD953700CF248F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		5DEE6D802004496200E6FAC7 /* SearchPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlacesViewController.swift; sourceTree = "<group>"; };
+		6A43B27620091D375F1D8D95 /* Pods_Detourist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Detourist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE53AA2D992A9A0B5B30B3 /* Pods-Detourist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detourist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Detourist/Pods-Detourist.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057E83D7C0EB554927A302BD /* libPods-Detourist.a in Frameworks */,
+				385F625A1CE929CC96F135E2 /* Pods_Detourist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +88,7 @@
 		1C9B63BB8851DBC41A0CE40C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0366398D7EF31BB4ABDE9B2F /* libPods-Detourist.a */,
+				6A43B27620091D375F1D8D95 /* Pods_Detourist.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,7 +121,6 @@
 				5D19B11C1FFD953600CF248F /* AppDelegate.swift */,
 				5D19B11E1FFD953600CF248F /* ViewController.swift */,
 				5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */,
-				5DEE6D802004496200E6FAC7 /* SearchPlacesViewController.swift */,
 				5D19B1201FFD953600CF248F /* Main.storyboard */,
 				5D19B1231FFD953600CF248F /* Assets.xcassets */,
 				5D19B1251FFD953600CF248F /* LaunchScreen.storyboard */,
@@ -302,9 +299,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Detourist/Pods-Detourist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -318,9 +326,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Detourist/Pods-Detourist-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle",
-				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
@@ -359,7 +366,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DEE6D812004496200E6FAC7 /* SearchPlacesViewController.swift in Sources */,
 				5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */,
 				5D19B11F1FFD953600CF248F /* ViewController.swift in Sources */,
 				5D19B11D1FFD953600CF248F /* AppDelegate.swift in Sources */,

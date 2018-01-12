@@ -25,9 +25,9 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.8):
     - FirebaseCore (~> 4.0)
-  - FirebaseUI/Auth (4.5.0):
+  - FirebaseUI/Auth (4.5.1):
     - Firebase/Auth (~> 4.2)
-  - FirebaseUI/Google (4.5.0):
+  - FirebaseUI/Google (4.5.1):
     - FirebaseUI/Auth
     - GoogleSignIn (~> 4.0)
   - GoogleMaps (2.5.0):
@@ -81,7 +81,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
   FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
-  FirebaseUI: 883482fea73b73bbb488c55176f4c6ad128957eb
+  FirebaseUI: 1dc9c8a87a776b488a28a28541f029e60c824cfd
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
@@ -91,6 +91,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: c718cbfcf8f7faa95cb3c39f7bb47e7885e5d2e9
+PODFILE CHECKSUM: bddc8c926032511b7b6bcca902d22c02abb77f2e
 
 COCOAPODS: 1.3.1

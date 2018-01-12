@@ -7,19 +7,54 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, FUIAuthDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        checkLoggedIn()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func checkLoggedIn() {
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+                // user is signed in
+            } else {
+                // no user is signed in
+                self.login()
+            }
+        }
+    }
 
-
+    func login() {
+        let authUI = FUIAuth.defaultAuthUI()
+        let providers: [FUIAuthProvider] = [
+            FUIGoogleAuth(),
+            ]
+        authUI?.delegate = self
+        authUI?.providers = providers
+        let authViewController = authUI?.authViewController()
+        self.present(authViewController!, animated: true, completion: nil)
+    }
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        if error != nil {
+            // Problem signing in
+            login()
+        } else {
+            // User is in! Here is where we code after signing in
+        }
+    }
+    
 }
 
