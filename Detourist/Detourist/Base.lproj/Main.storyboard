@@ -30,13 +30,7 @@
         <scene sceneID="kpP-jz-7iG">
             <objects>
                 <viewController id="Zie-h9-NKz" userLabel="Search View Controller" customClass="SearchViewController" customModule="Detourist" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="TKC-R6-LkJ">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="6wH-AJ-86f">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="custom" id="MBr-KY-qHJ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="TKC-R6-LkJ"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="6nI-PW-MpM" id="g3y-mf-Z1e"/>
                     </connections>

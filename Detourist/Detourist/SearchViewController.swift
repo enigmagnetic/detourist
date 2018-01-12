@@ -57,6 +57,17 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
         // Do something with the selected place.
+        
+        let marker = GMSMarker(position: (place.coordinate))
+        marker.title = place.name
+        marker.snippet = place.formattedAddress
+        
+        let markerLat = place.coordinate.latitude
+        let markerLon = place.coordinate.longitude
+        let camera = GMSCameraPosition.camera(withLatitude: markerLat, longitude: markerLon, zoom: 13.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        self.view = mapView
+
         print("Place name: \(place.name)")
         print("Place address: \(String(describing: place.formattedAddress))")
     }
@@ -72,5 +83,11 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
     
     func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
+
+extension SearchViewController: UITableViewDelegate {
+    func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
