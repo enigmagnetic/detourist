@@ -9,16 +9,23 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, FUIAuthDelegate {
 
     var window: UIWindow?
+   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Google Maps API Key
         GMSServices.provideAPIKey("AIzaSyAzqtHwZ9ctFToc0aiRUP7Oz4HpL6i6qfY")
         GMSPlacesClient.provideAPIKey("AIzaSyAzqtHwZ9ctFToc0aiRUP7Oz4HpL6i6qfY")
+        
+        // Initialize Firebase
+        FirebaseApp.configure()
         
         return true
     }
@@ -45,6 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        // other URL handling goes here.
+        return false
+    }
 }
 
