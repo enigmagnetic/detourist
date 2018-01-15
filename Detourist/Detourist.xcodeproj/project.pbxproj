@@ -15,10 +15,13 @@
 		5D19B1271FFD953600CF248F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D19B1251FFD953600CF248F /* LaunchScreen.storyboard */; };
 		5D19B1321FFD953600CF248F /* DetouristTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D19B1311FFD953600CF248F /* DetouristTests.swift */; };
 		5D19B13D1FFD953700CF248F /* DetouristUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D19B13C1FFD953700CF248F /* DetouristUITests.swift */; };
+		5D1E1676200AD5A300D6DEE4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1E1675200AD5A300D6DEE4 /* CoreText.framework */; };
+		5D1E1678200AD5AD00D6DEE4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1E1677200AD5AD00D6DEE4 /* CoreData.framework */; };
+		5D1E167A200AD5B900D6DEE4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1E1679200AD5B900D6DEE4 /* AVFoundation.framework */; };
+		5D1E167C200AD5C400D6DEE4 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1E167B200AD5C400D6DEE4 /* GLKit.framework */; };
+		5D1E167E200AD5CC00D6DEE4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1E167D200AD5CC00D6DEE4 /* ImageIO.framework */; };
+		5D1E1680200C1B5600D6DEE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E167F200C1B5600D6DEE4 /* GoogleService-Info.plist */; };
 		5D884EDD200974CC00BFFCB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D884EDB2009742000BFFCB5 /* CoreLocation.framework */; };
-		5DAAD1E62004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */; };
-		5DAAD1E72004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */; };
-		5DAAD1E82004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */; };
 		5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +57,13 @@
 		5D19B1381FFD953600CF248F /* DetouristUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetouristUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D19B13C1FFD953700CF248F /* DetouristUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetouristUITests.swift; sourceTree = "<group>"; };
 		5D19B13E1FFD953700CF248F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D1E1675200AD5A300D6DEE4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		5D1E1677200AD5AD00D6DEE4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5D1E1679200AD5B900D6DEE4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5D1E167B200AD5C400D6DEE4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		5D1E167D200AD5CC00D6DEE4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		5D1E167F200C1B5600D6DEE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D884EDB2009742000BFFCB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6A43B27620091D375F1D8D95 /* Pods_Detourist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Detourist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE53AA2D992A9A0B5B30B3 /* Pods-Detourist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detourist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Detourist/Pods-Detourist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D1E167E200AD5CC00D6DEE4 /* ImageIO.framework in Frameworks */,
+				5D1E167C200AD5C400D6DEE4 /* GLKit.framework in Frameworks */,
+				5D1E167A200AD5B900D6DEE4 /* AVFoundation.framework in Frameworks */,
+				5D1E1678200AD5AD00D6DEE4 /* CoreData.framework in Frameworks */,
+				5D1E1676200AD5A300D6DEE4 /* CoreText.framework in Frameworks */,
 				5D884EDD200974CC00BFFCB5 /* CoreLocation.framework in Frameworks */,
 				385F625A1CE929CC96F135E2 /* Pods_Detourist.framework in Frameworks */,
 			);
@@ -91,6 +104,11 @@
 		1C9B63BB8851DBC41A0CE40C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D1E167D200AD5CC00D6DEE4 /* ImageIO.framework */,
+				5D1E167B200AD5C400D6DEE4 /* GLKit.framework */,
+				5D1E1679200AD5B900D6DEE4 /* AVFoundation.framework */,
+				5D1E1677200AD5AD00D6DEE4 /* CoreData.framework */,
+				5D1E1675200AD5A300D6DEE4 /* CoreText.framework */,
 				5D884EDB2009742000BFFCB5 /* CoreLocation.framework */,
 				6A43B27620091D375F1D8D95 /* Pods_Detourist.framework */,
 			);
@@ -129,7 +147,7 @@
 				5D19B1231FFD953600CF248F /* Assets.xcassets */,
 				5D19B1251FFD953600CF248F /* LaunchScreen.storyboard */,
 				5D19B1281FFD953600CF248F /* Info.plist */,
-				5DAAD1E52004AD4A008DB7B2 /* GoogleService-Info.plist */,
+				5D1E167F200C1B5600D6DEE4 /* GoogleService-Info.plist */,
 			);
 			path = Detourist;
 			sourceTree = "<group>";
@@ -272,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D19B1271FFD953600CF248F /* LaunchScreen.storyboard in Resources */,
-				5DAAD1E62004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */,
+				5D1E1680200C1B5600D6DEE4 /* GoogleService-Info.plist in Resources */,
 				5D19B1241FFD953600CF248F /* Assets.xcassets in Resources */,
 				5D19B1221FFD953600CF248F /* Main.storyboard in Resources */,
 			);
@@ -282,7 +300,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DAAD1E72004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +307,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DAAD1E82004AD4A008DB7B2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

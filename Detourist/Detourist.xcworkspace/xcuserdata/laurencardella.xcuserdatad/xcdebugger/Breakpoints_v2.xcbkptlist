@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Detourist/SearchViewController.swift"
-            timestampString = "537578664.2242039"
+            timestampString = "537685398.425823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "SearchViewController"
             landmarkType = "21">
          </BreakpointContent>

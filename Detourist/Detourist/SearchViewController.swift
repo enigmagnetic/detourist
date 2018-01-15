@@ -44,14 +44,15 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         let latitude = locationManager.location?.coordinate.latitude ?? 23.1136
         let longitude = locationManager.location?.coordinate.longitude ?? 82.3666
         
-        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 10.0)
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 12.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.view = mapView
         self.mapView?.isMyLocationEnabled = true
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-         // locationManager.stopUpdatingLocation()
+         locationManager.stopUpdatingLocation()
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {
@@ -65,12 +66,10 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         self.view = mapView
         
         let marker = GMSMarker(position: (place.coordinate))
-        marker.title = place.name
+        // marker.title = place.name
+        // marker.snippet = place.formattedAddress
+        
         marker.map = mapView
-       
-
-        print("Place name: \(place.name)")
-        print("Place address: \(String(describing: place.formattedAddress))")
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {
@@ -84,6 +83,33 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
     
     func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
+
+extension ViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        print("didTapInfoWindowOf")
+    }
+    
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 100))
+        view.backgroundColor = UIColor.white
+        view.layer.cornerRadius = 6
+        
+        let placeName = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
+        placeName.text = marker.title
+        view.addSubview(placeName)
+        
+        let addButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        addButton.setTitle("Add to List", for: .normal)
+        addButton.addTarget(self, action: #selector(addToList), for: .touchUpInside)
+        view.addSubview(addButton)
+        
+        return view
+    }
+    
+    @objc func addToList(sender: UIButton!) {
+        print("Button tapped")
     }
 }
 
