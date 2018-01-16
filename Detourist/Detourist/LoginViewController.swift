@@ -12,7 +12,7 @@ import FirebaseAuthUI
 import FirebaseGoogleAuthUI
 
 
-class ViewController: UIViewController, FUIAuthDelegate {
+class LoginViewController: UIViewController, FUIAuthDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,8 @@ class ViewController: UIViewController, FUIAuthDelegate {
     func checkLoggedIn() {
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
-                // user is signed in
+                let searchViewController = SearchViewController()
+                self.present(searchViewController, animated: true, completion: nil)
             } else {
                 // no user is signed in
                 self.login()
@@ -53,6 +54,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
             login()
         } else {
             // User is in! Here is where we code after signing in
+            checkLoggedIn()
         }
     }
     
