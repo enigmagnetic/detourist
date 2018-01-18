@@ -71,6 +71,9 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         let markerLon = place.coordinate.longitude
         let camera = GMSCameraPosition.camera(withLatitude: markerLat, longitude: markerLon, zoom: 13.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+       
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
         self.view = mapView
         
        // let marker = GMSMarker(position: (place.coordinate))
@@ -92,7 +95,9 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
     func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
-    
+}
+
+extension SearchViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         print("didTapInfoWindowOf")
     }
@@ -116,8 +121,7 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
     
     @objc func addToList(sender: UIButton!) {
         print("Button tapped")
-    }
-}
+    }}
 
 extension SearchViewController: UITableViewDelegate {
     func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
