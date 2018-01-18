@@ -47,7 +47,7 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 12.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
-        self.mapView?.isMyLocationEnabled = true
+        mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         showMarker(position: camera.target)
         self.view = mapView
@@ -60,7 +60,7 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-         locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {

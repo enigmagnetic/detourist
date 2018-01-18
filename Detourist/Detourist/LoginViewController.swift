@@ -18,12 +18,16 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("in loginViewController.viewDidLoad")
-        checkLoggedIn()
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         checkLoggedIn()
     }
     
     func checkLoggedIn() {
