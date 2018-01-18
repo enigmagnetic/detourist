@@ -21,6 +21,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kfa-BH-R8Y"/>
+                    <connections>
+                        <segue destination="Zie-h9-NKz" kind="show" identifier="toSearchVC" id="YAA-lw-fAm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,7 +61,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Zie-h9-NKz" kind="relationship" relationship="rootViewController" id="N3e-v0-0cA"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L9k-YG-gWy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ7-fx-BYe" userLabel="First Responder" sceneMemberID="firstResponder"/>

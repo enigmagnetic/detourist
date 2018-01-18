@@ -17,6 +17,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("in loginViewController.viewDidLoad")
         checkLoggedIn()
     }
 
@@ -28,8 +29,8 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     func checkLoggedIn() {
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
-                let searchViewController = SearchViewController()
-                self.present(searchViewController, animated: true, completion: nil)
+                print("user logged in")
+                self.performSegue(withIdentifier: "toSearchVC", sender: nil)
             } else {
                 // no user is signed in
                 self.login()
