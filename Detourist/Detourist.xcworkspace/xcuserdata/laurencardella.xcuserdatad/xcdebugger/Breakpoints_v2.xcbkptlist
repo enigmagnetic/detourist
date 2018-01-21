@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Detourist/SearchViewController.swift"
-            timestampString = "537938207.192546"
+            timestampString = "538237913.886081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131">
+            startingLineNumber = "133"
+            endingLineNumber = "133">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,13 +24,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Detourist/SearchViewController.swift"
-            timestampString = "537938207.1930031"
+            timestampString = "538237913.88615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Detourist/PlaceInfoView.swift"
+            timestampString = "538237913.886206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "PlaceInfoView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detourist.PlaceInfoView.placeNameLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Detourist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laurencardella/Desktop/ada/capstone/detourist/Detourist/Detourist/PlaceInfoView.swift"
+                  timestampString = "538226145.98358"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detourist.PlaceInfoView.placeNameLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Detourist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laurencardella/Desktop/ada/capstone/detourist/Detourist/Detourist/PlaceInfoView.swift"
+                  timestampString = "538226145.994339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detourist.PlaceInfoView.init(frame: __C.CGRect) -&gt; Detourist.PlaceInfoView"
+                  moduleName = "Detourist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laurencardella/Desktop/ada/capstone/detourist/Detourist/Detourist/PlaceInfoView.swift"
+                  timestampString = "538226145.997624"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detourist.PlaceInfoView.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Detourist.PlaceInfoView&gt;"
+                  moduleName = "Detourist"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/laurencardella/Desktop/ada/capstone/detourist/Detourist/Detourist/PlaceInfoView.swift"
+                  timestampString = "538226146.000459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
