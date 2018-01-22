@@ -13,7 +13,7 @@ import GooglePlaces
 
 class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteResultsViewControllerDelegate {
     
-    @IBOutlet weak var mapView: GMSMapView!
+    var mapView: GMSMapView?
     let locationManager = CLLocationManager()
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
@@ -44,13 +44,14 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         let latitude = locationManager.location?.coordinate.latitude ?? 23.1136
         let longitude = locationManager.location?.coordinate.longitude ?? 82.3666
         
-        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 12.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 16.0)
+        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        self.mapView?.delegate = self
         
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
+        self.mapView?.isMyLocationEnabled = true
+        self.mapView?.settings.myLocationButton = true
         showMarker(position: camera.target)
-        self.view = mapView
+        self.view = self.mapView
     }
     
     func showMarker(position: CLLocationCoordinate2D) {
@@ -67,20 +68,9 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         searchController?.isActive = false
         // Do something with the selected place.
         
-        let markerLat = place.coordinate.latitude
-        let markerLon = place.coordinate.longitude
-        let camera = GMSCameraPosition.camera(withLatitude: markerLat, longitude: markerLon, zoom: 13.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-       
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-        self.view = mapView
-        
-       // let marker = GMSMarker(position: (place.coordinate))
-        // marker.title = place.name
-        // marker.snippet = place.formattedAddress
+        self.mapView?.animate(toLocation: place.coordinate)
+
         showMarker(position: place.coordinate)
-        // marker.map = mapView
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {
