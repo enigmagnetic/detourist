@@ -21,6 +21,8 @@
 		5D1E167C200AD5C400D6DEE4 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1E167B200AD5C400D6DEE4 /* GLKit.framework */; };
 		5D1E167E200AD5CC00D6DEE4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1E167D200AD5CC00D6DEE4 /* ImageIO.framework */; };
 		5D1E1680200C1B5600D6DEE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E167F200C1B5600D6DEE4 /* GoogleService-Info.plist */; };
+		5D1E16842011CD9F00D6DEE4 /* PlaceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E16832011CD9F00D6DEE4 /* PlaceInfoView.xib */; };
+		5D1E16862011CE2800D6DEE4 /* PlaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E16852011CE2800D6DEE4 /* PlaceInfoView.swift */; };
 		5D884EDD200974CC00BFFCB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D884EDB2009742000BFFCB5 /* CoreLocation.framework */; };
 		5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		5D1E167B200AD5C400D6DEE4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		5D1E167D200AD5CC00D6DEE4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		5D1E167F200C1B5600D6DEE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D1E16832011CD9F00D6DEE4 /* PlaceInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceInfoView.xib; sourceTree = "<group>"; };
+		5D1E16852011CE2800D6DEE4 /* PlaceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoView.swift; sourceTree = "<group>"; };
 		5D884EDB2009742000BFFCB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6A43B27620091D375F1D8D95 /* Pods_Detourist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Detourist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,8 @@
 				5D19B11E1FFD953600CF248F /* LoginViewController.swift */,
 				5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */,
 				5D19B1201FFD953600CF248F /* Main.storyboard */,
+				5D1E16832011CD9F00D6DEE4 /* PlaceInfoView.xib */,
+				5D1E16852011CE2800D6DEE4 /* PlaceInfoView.swift */,
 				5D19B1231FFD953600CF248F /* Assets.xcassets */,
 				5D19B1251FFD953600CF248F /* LaunchScreen.storyboard */,
 				5D19B1281FFD953600CF248F /* Info.plist */,
@@ -292,6 +298,7 @@
 				5D19B1271FFD953600CF248F /* LaunchScreen.storyboard in Resources */,
 				5D1E1680200C1B5600D6DEE4 /* GoogleService-Info.plist in Resources */,
 				5D19B1241FFD953600CF248F /* Assets.xcassets in Resources */,
+				5D1E16842011CD9F00D6DEE4 /* PlaceInfoView.xib in Resources */,
 				5D19B1221FFD953600CF248F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +395,7 @@
 			files = (
 				5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */,
 				5D19B11F1FFD953600CF248F /* LoginViewController.swift in Sources */,
+				5D1E16862011CE2800D6DEE4 /* PlaceInfoView.swift in Sources */,
 				5D19B11D1FFD953600CF248F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

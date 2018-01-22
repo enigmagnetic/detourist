@@ -10,10 +10,15 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 import GooglePlaces
+import Firebase
 
 class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteResultsViewControllerDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var placeInfoView: PlaceInfoView!
+    
+    let rootRef = Database.database().reference()
+    
     let locationManager = CLLocationManager()
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
@@ -49,14 +54,8 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-        showMarker(position: camera.target)
         self.view = mapView
-    }
-    
-    func showMarker(position: CLLocationCoordinate2D) {
-        let marker = GMSMarker()
-        marker.position = position
-        marker.map = mapView
+        self.view.addSubview(placeInfoView)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -74,13 +73,16 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
        
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-        self.view = mapView
         
-       // let marker = GMSMarker(position: (place.coordinate))
-        // marker.title = place.name
-        // marker.snippet = place.formattedAddress
-        showMarker(position: place.coordinate)
-        // marker.map = mapView
+        let marker = GMSMarker(position: place.coordinate)
+        
+        placeInfoView.placeNameLabel.text = place.name
+        placeInfoView.placeAddressLabel.text = place.formattedAddress
+
+        self.view = mapView
+        marker.map = mapView
+        self.view.addSubview(placeInfoView)
+        placeInfoView.isHidden = false
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {

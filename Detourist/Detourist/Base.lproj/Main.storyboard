@@ -33,8 +33,23 @@
         <scene sceneID="kpP-jz-7iG">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="Zie-h9-NKz" userLabel="Search View Controller" customClass="SearchViewController" customModule="Detourist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqY-kf-Xlg" customClass="GMSMapView" customModule="Detourist" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view hidden="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LoS-0z-HYc" customClass="PlaceInfoView" customModule="Detourist" customModuleProvider="target">
+                                <rect key="frame" x="67" y="155" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zc7-ho-SFd"/>
+                    </view>
                     <navigationItem key="navigationItem" id="TKC-R6-LkJ"/>
                     <connections>
+                        <outlet property="mapView" destination="cqY-kf-Xlg" id="EVP-UG-yuX"/>
+                        <outlet property="placeInfoView" destination="LoS-0z-HYc" id="de2-rc-Uy8"/>
                         <outlet property="searchDisplayController" destination="6nI-PW-MpM" id="g3y-mf-Z1e"/>
                     </connections>
                 </viewController>
@@ -48,7 +63,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1910" y="25"/>
+            <point key="canvasLocation" x="1909.5999999999999" y="24.7376311844078"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fLh-DX-efW">
