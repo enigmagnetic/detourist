@@ -24,6 +24,8 @@
 		5D1E16842011CD9F00D6DEE4 /* PlaceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E16832011CD9F00D6DEE4 /* PlaceInfoView.xib */; };
 		5D1E16862011CE2800D6DEE4 /* PlaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E16852011CE2800D6DEE4 /* PlaceInfoView.swift */; };
 		5D884EDD200974CC00BFFCB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D884EDB2009742000BFFCB5 /* CoreLocation.framework */; };
+		5D92BD992015B983007CE0C7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92BD982015B983007CE0C7 /* Place.swift */; };
+		5D92BD9B20160C57007CE0C7 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92BD9A20160C57007CE0C7 /* PlacesTableViewController.swift */; };
 		5DEE6D7F2000DCE200E6FAC7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		5D1E16832011CD9F00D6DEE4 /* PlaceInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceInfoView.xib; sourceTree = "<group>"; };
 		5D1E16852011CE2800D6DEE4 /* PlaceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoView.swift; sourceTree = "<group>"; };
 		5D884EDB2009742000BFFCB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5D92BD982015B983007CE0C7 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		5D92BD9A20160C57007CE0C7 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6A43B27620091D375F1D8D95 /* Pods_Detourist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Detourist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE53AA2D992A9A0B5B30B3 /* Pods-Detourist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detourist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Detourist/Pods-Detourist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				5D19B11E1FFD953600CF248F /* LoginViewController.swift */,
 				5DEE6D7E2000DCE200E6FAC7 /* SearchViewController.swift */,
 				5D19B1201FFD953600CF248F /* Main.storyboard */,
+				5D92BD982015B983007CE0C7 /* Place.swift */,
+				5D92BD9A20160C57007CE0C7 /* PlacesTableViewController.swift */,
 				5D1E16832011CD9F00D6DEE4 /* PlaceInfoView.xib */,
 				5D1E16852011CE2800D6DEE4 /* PlaceInfoView.swift */,
 				5D19B1231FFD953600CF248F /* Assets.xcassets */,
@@ -397,6 +403,8 @@
 				5D19B11F1FFD953600CF248F /* LoginViewController.swift in Sources */,
 				5D1E16862011CE2800D6DEE4 /* PlaceInfoView.swift in Sources */,
 				5D19B11D1FFD953600CF248F /* AppDelegate.swift in Sources */,
+				5D92BD992015B983007CE0C7 /* Place.swift in Sources */,
+				5D92BD9B20160C57007CE0C7 /* PlacesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ import Firebase
 
 class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteResultsViewControllerDelegate {
     
-    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet var mapView: GMSMapView?
     @IBOutlet weak var placeInfoView: PlaceInfoView!
     
     let rootRef = Database.database().reference()
@@ -50,11 +50,12 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         let longitude = locationManager.location?.coordinate.longitude ?? 82.3666
         
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 12.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        self.mapView?.delegate = self
         
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-        self.view = mapView
+        self.mapView?.isMyLocationEnabled = true
+        self.mapView?.settings.myLocationButton = true
+        self.view = self.mapView
         self.view.addSubview(placeInfoView)
     }
     
