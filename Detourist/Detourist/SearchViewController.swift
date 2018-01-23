@@ -67,20 +67,12 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         searchController?.isActive = false
         // Do something with the selected place.
         
-        let markerLat = place.coordinate.latitude
-        let markerLon = place.coordinate.longitude
-        let camera = GMSCameraPosition.camera(withLatitude: markerLat, longitude: markerLon, zoom: 13.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-       
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-        
         let marker = GMSMarker(position: place.coordinate)
         
         placeInfoView.placeNameLabel.text = place.name
         placeInfoView.placeAddressLabel.text = place.formattedAddress
 
-        self.view = mapView
+        self.mapView?.animate(toLocation: place.coordinate)
         marker.map = mapView
         self.view.addSubview(placeInfoView)
         placeInfoView.isHidden = false
