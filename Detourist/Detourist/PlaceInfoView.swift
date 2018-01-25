@@ -13,7 +13,6 @@ class PlaceInfoView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var placeAddressLabel: UILabel!
-    @IBOutlet weak var placeTypeLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
     //MARK: Initializers

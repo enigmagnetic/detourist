@@ -12,17 +12,20 @@ import GoogleMaps
 import GooglePlaces
 import Firebase
 
-class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteResultsViewControllerDelegate {
+class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteResultsViewControllerDelegate, GMSMapViewDelegate {
     
     @IBOutlet var mapView: GMSMapView?
     @IBOutlet weak var placeInfoView: PlaceInfoView!
     
-    let rootRef = Database.database().reference()
+    let userKey = Auth.auth().currentUser?.uid
+    
     
     let locationManager = CLLocationManager()
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
+    
+    var currentPlace: GMSPlace?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,13 +72,14 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         
         let marker = GMSMarker(position: place.coordinate)
         
-        placeInfoView.placeNameLabel.text = place.name
-        placeInfoView.placeAddressLabel.text = place.formattedAddress
+        self.placeInfoView?.placeNameLabel.text = place.name
+        self.placeInfoView?.placeAddressLabel.text = place.formattedAddress
+        self.currentPlace = place
 
         self.mapView?.animate(toLocation: place.coordinate)
         marker.map = mapView
-        self.view.addSubview(placeInfoView)
-        placeInfoView.isHidden = false
+        self.placeInfoView?.isHidden = false
+        self.placeInfoView.addButton.addTarget(self, action: #selector(addPlace), for: .touchUpInside)
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {
@@ -90,33 +94,31 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
     func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
+    
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        // self.placeInfoView?.isHidden = true
+    }
+    
+    @IBAction func addPlace() {
+        print("add Button pressed")
+        let currentCoordinate = ["latitude": currentPlace?.coordinate.latitude, "longitude": currentPlace?.coordinate.longitude]
+        
+        let userPlacesRef = Database.database().reference().child("users").child(userKey!).child("places")
+        let placeRef = userPlacesRef.childByAutoId()
+        let newPlace = Place(name: (currentPlace?.name)!, placeId: (currentPlace?.placeID)!, address: (currentPlace?.formattedAddress)!, coordinate: currentCoordinate as! [String : Double], visited: false)
+        
+        if currentPlace != nil {
+            placeRef.setValue(newPlace.toAnyObject())
+        } else {
+            // add error handling
+        }
+        
+        
+        
+       /* self.placeInfoView.addButton.removeTarget(self, action: #selector(addPlace(place:)), for: .touchUpInside)
+        self.placeInfoView.addButton.setTitle("Place Added!", for: .disabled) */
+    }
 }
-
-extension SearchViewController: GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        print("didTapInfoWindowOf")
-    }
-    
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 100))
-        view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = 6
-        
-        let placeName = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
-        placeName.text = marker.title
-        view.addSubview(placeName)
-        
-        let addButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        addButton.setTitle("Add to List", for: .normal)
-        addButton.addTarget(self, action: #selector(addToList), for: .touchUpInside)
-        view.addSubview(addButton)
-        
-        return view
-    }
-    
-    @objc func addToList(sender: UIButton!) {
-        print("Button tapped")
-    }}
 
 extension SearchViewController: UITableViewDelegate {
     func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
