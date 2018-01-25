@@ -112,11 +112,8 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
         } else {
             // add error handling
         }
-        
-        
-        
-       /* self.placeInfoView.addButton.removeTarget(self, action: #selector(addPlace(place:)), for: .touchUpInside)
-        self.placeInfoView.addButton.setTitle("Place Added!", for: .disabled) */
+        self.placeInfoView.addButton.setTitle("Place Added!", for: .normal)
+        self.placeInfoView.addButton.removeTarget(self, action: #selector(addPlace), for: .touchUpInside)
     }
 }
 
